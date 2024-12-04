@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Campus Issue Reporting</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
     <header>
-        <h1>Campus Issue Reporting</h1>
+        <h1>Campus Issue Reporting System</h1>
     </header>
     <main>
+        <!-- Login Section -->
         <section id="login-section">
             <h2>Login</h2>
             <form id="login-form">
@@ -23,11 +25,10 @@
                 </select>
                 <button type="submit">Login</button>
             </form>
-            <p>
-                Don't have an account? <a href="#" id="show-register">Create one</a>
-            </p>
+            <p>Don't have an account? <a href="#" id="show-register">Create one</a></p>
         </section>
 
+        <!-- Registration Section -->
         <section id="register-section" class="hidden">
             <h2>Create New Account</h2>
             <form id="register-form">
@@ -43,6 +44,7 @@
             <p>Already have an account? <a href="#" id="show-login">Login</a></p>
         </section>
 
+        <!-- Issue Reporting Section -->
         <section id="issue-section" class="hidden">
             <h2>Report an Issue</h2>
             <form id="issue-form">
@@ -57,23 +59,19 @@
                 <select id="sub-category" required>
                     <option value="" disabled selected>Select Subcategory</option>
                 </select>
-                <select id="sub-sub-category" required class="hidden">
-                    <option value="" disabled selected>Select Sub-Subcategory</option>
-                </select>
                 <textarea id="comment" placeholder="Describe the issue" required></textarea>
                 <button type="submit">Submit</button>
             </form>
-
             <h2>Reported Issues</h2>
             <ul id="issue-list"></ul>
         </section>
 
+        <!-- Admin Dashboard -->
         <section id="admin-section" class="hidden">
             <h2>Admin Dashboard</h2>
             <ul id="admin-issue-list"></ul>
         </section>
     </main>
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
-
